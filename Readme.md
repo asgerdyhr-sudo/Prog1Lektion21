@@ -11,7 +11,7 @@ passende besked til brugeren i konsollen.
 
 ### Opgave 2
 
-I denne opgave skal du indlæse tallene fra filen [numbers.txt](resources/numbers.txt) gange dem med 2 og udskrrive
+I denne opgave skal du indlæse tallene fra filen [numbers.txt](resources/numbers.txt) gange dem med 2 og udskrive
 resultatet i konsollen.
 
 ---
@@ -44,12 +44,37 @@ Lav en metode med følgende signatur:
 public static int maximum(File file)
 ```
 
-metoden skal returnere det største tal i den fil der gives som parameter. Filen indeholder en række heltal, et tal pr. linje.
+Metoden skal returnere det største tal i den fil der gives som parameter. 
+Filen indeholder en række heltal, et tal pr. linje.
 
 Husk at fange relevante exceptions.
 
+[data.txt](resources/opgave06/data.txt) indeholder tilfældige heltal som I kan bruge som indput.
+
 ---
 
-### Opgave 7
+### Opgave 7 Ekstra opgave
 
+Denne opgave kommer fra https://adventofcode.com/2024/day/2
 
+I filen [reports.txt](resources/opgave07/reports.txt) finder I et antal linjer med et antal heltal i hver linje.
+
+I skal indlæse disse tal linje for linje og kontrollere om denne linje er sikker eller usikker. 
+
+En linje er sikker hvis 
+- alle tal i linjen er enten voksende eller faldende. 
+- Forskellen imellem to nabotal er mindst 1 og højest 3
+
+Eksempler:
+
+- 7 6 4 2 1: Sikker, fordi tallene alle falder med 1 eller 2.
+- 1 2 7 8 9: Usikker, fordi 2 → 7 er en stigning på 5.
+- 9 7 6 2 1: Usikker, fordi 6 → 2 er et fald på 4.
+- 1 3 2 4 5: Usikker, fordi 1 → 3 stiger, men 3 → 2 falder.
+- 8 6 4 4 1: Usikker, fordi 4 → 4 hverken er en stigning eller et fald.
+- 1 3 6 7 9: Sikker, fordi tallene alle stiger med 1, 2 eller 3.
+
+Så I reports.txt er der 2 linjer der er sikre. 
+
+I filen [bigReport.txt](resources/opgave07/bigReport.txt) finder I lidt flere rækker. 
+Antallet af sikre linjer i denne fil er 246
